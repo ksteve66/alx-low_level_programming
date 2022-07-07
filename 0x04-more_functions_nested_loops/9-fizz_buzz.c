@@ -12,27 +12,24 @@ int main(void)
 	{
 		if (x % 3 == 0 || x % 5 == 0)
 		{
-			printf("FizzBuzz")
-		}
-				if (x % 3 == 0)
-				{
-					printf("Fizz");
-				}
-				if (x % 5 == 0)
-				{
-					printf("Buzz");
-				}
-			}
-			else
+			if (x % 3 == 0)
 			{
-				printf("%d", x);
+				printf("Fizz");
 			}
-			if (x != 100)
+			if (x % 5 == 0)
 			{
-			putchar(' ');
+				printf("Buzz");
 			}
 		}
-		putchar('\n');
-		return (0);
+		else
+		{
+			printf("%d", x);
+		}
+		if (x != 100)
+		{
+		putchar(' ');
+		}
 	}
+	putchar('\n');
+	return (0);
 }
