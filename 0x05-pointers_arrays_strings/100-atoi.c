@@ -1,28 +1,29 @@
 #include "main.h"
 
 /**
-* _atoi - Entry point
-* @s: input
-* Return: Always 0 (Success)
+* _atoi - Converts a string to an integer.
+* @s: The string to be converted.
+*
+* Return: The integer value of the coverted string
 */
-int main(void)
+int _atoi(char *s)
 {
-	char str[10] = "122";
-	int x = atoi(str);
+	int sign = 1;
 
-	printf("Converting '122': %d\n", x);
+	usigned int num = 0;
 
-	char str2[10] = "Hello!";
+	do {
+		if (*s == '-')
+			sign *= -1;
 
-	x = atoi(str2);
-	printf("Converting 'Hello!': %d\n", x);
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
 
-	char str3[10] = "99Hello!";
+		else if (num > 0)
+			break;
 
-	x = atoi(str3);
-	printf("Converting '99Hello!': %d\n", x);}
-	{
-	return 0;
-	}
+	} while (*s++);
+
+	return (num * sign);
 }
 
