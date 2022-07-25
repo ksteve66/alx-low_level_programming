@@ -16,10 +16,10 @@ int **alloc_grid(int width, int height)
 	if (width < 1 || height < 1)
 		return (NULL);
 
-	grindout = malloc(height * sizeof(int *));
-	if (grindout == NULL)
+	gridout = malloc(height * sizeof(int *));
+	if (gridout == NULL)
 	{
-		free(grindout);
+		free(gridout);
 		return (NULL);
 	}
 	for (i = 0; i < height; i++)
